@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Markdown</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/github-markdown-css/github-markdown.css">
+  <link rel="stylesheet" href="css/markdown.css">
+</head>
+<body>
+  <div id="app" class="container">
+    <div class="row">
+      <div class="col-xs-12 header-text">
+        <h1>MARKDOW WITH VUEJS</h1>
+        <span>Form:coligo.io | Author:zhouyufei</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-6">
+        <textarea id="editor" class="form-control" v-model="rawMarkdown"></textarea>
+      </div>
+      <div id="preview" class="col-xs-12 col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <article class="markdown-body">
+             {{{renderedMarkdown}}}
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <button type="button" class="bth btn-primary pull-right" v-on:click="renderPreview">Preview</button>
+      </div>
+    </div>
+  </div>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="node_modules/vue/dist/vue.js"></script>
+<script src="node_modules/vue-resource/dist/vue-resource.min.js"></script>
+<script src="js/markdown.js"></script>
+</body>
+</html>
